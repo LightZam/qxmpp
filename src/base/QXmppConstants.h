@@ -54,6 +54,8 @@ extern const char* ns_ibb;
 extern const char* ns_private;
 // XEP-0054: vcard-temp
 extern const char* ns_vcard;
+// XEP-0055 Jabber Search
+extern const char* ns_search;
 // XEP-0059: Result Set Management
 extern const char* ns_rsm;
 // XEP-0065: SOCKS5 Bytestreams

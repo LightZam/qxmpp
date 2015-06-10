@@ -53,6 +53,8 @@ const char* ns_ibb = "http://jabber.org/protocol/ibb";
 const char* ns_private = "jabber:iq:private";
 // XEP-0054: vcard-temp
 const char* ns_vcard = "vcard-temp";
+// XEP-0055: Jabber Search
+const char* ns_search = "jabber:iq:search";
 // XEP-0059: Result Set Management
 const char* ns_rsm = "http://jabber.org/protocol/rsm";
 // XEP-0065: SOCKS5 Bytestreams
