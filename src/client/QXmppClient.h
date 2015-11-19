@@ -139,6 +139,8 @@ public:
 
     bool isAuthenticated() const;
     bool isConnected() const;
+    bool needRoster() const;
+    void setNeedRoster(bool need);
 
     QXmppPresence clientPresence() const;
     void setClientPresence(const QXmppPresence &presence);

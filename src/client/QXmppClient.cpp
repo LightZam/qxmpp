@@ -53,6 +53,7 @@ public:
     bool receivedConflict;
     int reconnectionTries;
     QTimer *reconnectionTimer;
+    bool needRoster;
 
     void addProperCapability(QXmppPresence& presence);
     int getNextReconnectTime() const;
@@ -69,6 +70,7 @@ QXmppClientPrivate::QXmppClientPrivate(QXmppClient *qq)
     , reconnectionTries(0)
     , reconnectionTimer(0)
     , q(qq)
+    , needRoster(true)
 {
 }
 
@@ -318,6 +320,17 @@ bool QXmppClient::isAuthenticated() const
 bool QXmppClient::isConnected() const
 {
     return d->stream->isConnected();
+}
+
+/// Returns true if the client want roster from server.
+
+bool QXmppClient::needRoster() const
+{
+    return d->needRoster;
+}
+
+void QXmppClient::setNeedRoster(bool need) {
+    d->needRoster = need;
 }
 
 /// Returns the reference to QXmppRosterManager object of the client.
